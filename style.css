@@ -1,0 +1,941 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, san-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./img/bg1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+section nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+section nav .logo {
+  font-size: 3vw;
+  color: #c72092;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+section nav span {
+  color: #6c14d0;
+  text-decoration: underline;
+}
+
+section nav ul {
+  list-style: none;
+}
+
+section nav ul li {
+  display: inline-block;
+  margin: 5px 1.5vw;
+}
+
+section nav ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.2s;
+}
+
+section nav ul li a:hover {
+  color: #c72092;
+}
+
+section nav .icons i {
+  margin: 0 1vw;
+  cursor: pointer;
+  font-size: 2.5vw;
+  transition: 0.3s;
+}
+
+section nav .icons i:hover {
+  color: #c72092;
+}
+
+section .main {
+  margin-top: 10vh;
+}
+
+section .main .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section .main .main-content .main-text {
+  width: 80%;
+  text-align: center;
+}
+
+section .main .main-content .main-image {
+  width: 60%;
+  /* Reduced width for the shoe image */
+  max-width: 600px;
+  /* Added max-width for responsiveness */
+  margin-top: 2vh;
+}
+
+section .main .main-content .main-text h1 {
+  font-size: 4vw;
+  /* Reduced font size for "Nike Collection" */
+  line-height: 1.2;
+  margin-top: 2vh;
+  /* Adjusted margin-top */
+}
+
+section .main .main-content .main-text h1 span {
+  font-size: 3vw;
+}
+
+section .main .main-content .main-text p {
+  width: 80%;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+section .main .main-content .main-image img {
+  width: 100%;
+  max-width: 500px;
+  /* Adjusted max-width for responsiveness */
+  margin-top: 5vh;
+}
+
+section .main .social-icons {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+section .main .social-icons i {
+  margin: 1.5vw 0;
+  cursor: pointer;
+  font-size: 2.5vw;
+  transition: 0.3s;
+}
+
+section .main .social-icons i:hover {
+  color: #c72092;
+}
+
+section .main .button {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  /* Center the button horizontally */
+  padding: 1.5vh 3vw;
+  border-radius: 30px;
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  display: flex;
+  align-items: center;
+}
+
+section .main .button a {
+  color: white;
+  text-decoration: none;
+}
+
+section .main .button i {
+  color: white;
+  margin-left: 1vw;
+  transition: 0.3s;
+}
+
+section .main .button:hover i {
+  transform: translateX(1vw);
+}
+
+/* Your existing styles... */
+
+/* Menu Icon Styles */
+/* Your existing styles... */
+
+/* Menu Icon Styles */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon i {
+  font-size: 2.5vw;
+  color: #000;
+  margin: 0 1vw; /* Add margin for spacing */
+  height: 2.5vw; /* Set the height */
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    text-align: center; /* Center the text within the nav-links */
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Adjust alignment for better appearance */
+    margin-left: auto;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 15px;
+    text-decoration: none;
+    color: #000;
+    display: block; /* Ensure each link takes the full width */
+  }
+
+  /* Adjustments for smaller screens */
+  section nav .logo {
+    font-size: 4vw;
+  }
+
+  /* Adjustments for menu icon on smaller screens */
+  .menu-icon i {
+    font-size: 2.5vw;
+    margin: 0 1vw; /* Add margin for spacing */
+    height: 2.5vw; /* Set the height */
+  }
+}
+
+
+.products {
+  width: 100%;
+  min-height: 140vh;
+  padding: 25px 0;
+  margin-bottom: 20px;
+  /* Updated margin to further reduce space between products and about */
+}
+
+.products h1 {
+  margin: 35px 0;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* Center the text */
+  text-transform: uppercase;
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.products .box {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  /* Updated grid-gap for a more compact layout */
+}
+
+.products .box .card {
+  width: 100%;
+  height: 500px;
+  /* Increased height for better display */
+  box-shadow: 0 0 8px #6c14d0;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px;
+  background: #f6f6f6;
+  position: relative;
+}
+
+.products .box .card .small_card {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  margin: 10px 0;
+  transform: translateX(-20px);
+  transition: 0.3s;
+}
+
+.products .box .card .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products .box .card:hover .small_card {
+  transform: translateY(2px);
+}
+
+.products .box .card .image img {
+  width: 150px;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+
+.products .box .card:hover .image img {
+  transform: scale(1.1);
+}
+
+.products .box .card .small_card i {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 2px 0;
+  line-height: 40px;
+  border: 2px solid #999999;
+  transition: 0.3s;
+}
+
+.products .box .card .small_card i:hover {
+  color: #c72092;
+}
+
+.products .box .card .products_text h2 {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.products .box .card .products_text p {
+  font-size: 14px;
+  color: #919191;
+  line-height: 18px;
+  margin: 8px 0;
+}
+
+.products .box .card .products_text h3 {
+  margin: 5px 0;
+}
+
+.products .box .card .products_text .products_star {
+  color: orange;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+/* Media Query for larger screens */
+@media only screen and (min-width: 768px) {
+  .products .box .card .add_to_cart {
+    margin-top: auto;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    /* Display the "Add to Cart" button in larger screens */
+  }
+
+  .products .box .card .products_text .btn {
+    display: inline-block;
+    /* Show the button for larger screens */
+    text-decoration: none;
+    padding: 8px 16px;
+    background: linear-gradient(to right, #c72092, #6c14d0);
+    color: white;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .products .box .card .products_text .btn:hover {
+    background: linear-gradient(to right, #6c14d0, #c72092);
+  }
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 767px) {
+  .products .box .card .add_to_cart {
+    margin-top: auto;
+    font-size: 16px;
+    text-align: center;
+    /* Center the button text */
+    display: block;
+    /* Display the "Add to Cart" button in smaller screens */
+  }
+
+  .products .box .card .products_text .btn {
+    display: block;
+    /* Show the button for smaller screens */
+    text-decoration: none;
+    padding: 8px 16px;
+    background: linear-gradient(to right, #c72092, #6c14d0);
+    color: white;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .products .box .card .products_text .btn:hover {
+    background: linear-gradient(to right, #6c14d0, #c72092);
+  }
+}
+
+
+
+.about {
+  width: 80%;
+  margin: 20px auto;
+  /* Updated margin for better spacing between about and products */
+  padding: 40px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about h1 span {
+  color: #c72092;
+}
+
+.about_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about_small_image img {
+  width: 50px;
+  /* Adjusted image size */
+  height: 50px;
+  /* Adjusted image size */
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about_small_image img:hover {
+  transform: scale(1.2);
+}
+
+.image_container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about_text p {
+  font-size: 18px;
+  /* Adjusted text size */
+  text-align: justify;
+  color: #555;
+  margin-bottom: 30px;
+  /* Increased spacing between text and button */
+}
+
+.about_shop_btn {
+  display: block;
+  margin: 0 auto;
+  /* Center the button */
+  padding: 10px 20px;
+  /* Adjusted button padding */
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  /* Center the text within the button */
+  font-size: 16px;
+  /* Reduced text size */
+}
+
+.about_shop_btn:hover {
+  background: linear-gradient(to right, #6c14d0, #c72092);
+}
+
+
+.review {
+  width: 80%;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.review h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.review h1 span {
+  margin-left: 15px;
+  background: linear-gradient(to left, #c72092, #6c14d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.review .review_box {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review .review_box .review_card {
+  width: 100%;
+  max-width: 500px;
+  background: #f6f6f6;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 0 15px rgba(108, 20, 208, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review .review_box .review_card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(108, 20, 208, 0.5);
+}
+
+.review .review_box .review_card .card_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review .review_box .review_card .card_top .profile {
+  display: flex;
+  align-items: center;
+}
+
+.review .review_box .review_card .card_top .profile .profile_image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.review .review_box .review_card .card_top .profile:hover .profile_image {
+  transform: scale(1.2);
+}
+
+.review .review_box .review_card .card_top .profile .profile_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.review .review_box .review_card .card_top .profile .name {
+  line-height: 22px;
+  color: #333;
+}
+
+.review .review_box .review_card .card_top .profile .name strong {
+  font-size: 1.2rem;
+  color: #c72092;
+}
+
+.review .review_box .review_card .card_top .profile .name .like i {
+  color: #6c14d0;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.review .review_box .review_card .comments p {
+  text-align: justify;
+  line-height: 22px;
+  margin-top: 15px;
+  color: #555;
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .review h1,
+  .review h1 span {
+    font-size: 1.8rem;
+  }
+
+  .review .review_box .review_card {
+    max-width: 100%;
+  }
+}
+
+
+
+.services {
+  width: 80%;
+  margin: 0 auto;
+  padding: 80px 0 10px;
+  text-align: center;
+}
+
+.services h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.services h1 span {
+  margin-left: 15px;
+  background: linear-gradient(to left, #c72092, #6c14d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services_cards {
+  width: 100%;
+  margin: 50px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.services_box {
+  width: calc(45% - 20px);
+  /* Adjusted width for better spacing on larger screens */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Added subtle box shadow */
+  margin-bottom: 30px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Added transition for smooth effects */
+}
+
+.services_box:hover {
+  transform: scale(1.03);
+  /* Scale effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Enhanced box shadow on hover */
+}
+
+.services_box i {
+  font-size: 3rem;
+  color: orange;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.services_box h3 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.services_box p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Media Query for larger screens */
+@media only screen and (min-width: 768px) {
+  .services_box {
+    width: calc(45% - 20px);
+    /* Adjusted width for better spacing on larger screens */
+  }
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 767px) {
+  .services_box {
+    width: calc(100% - 20px);
+    /* Full width on smaller screens */
+  }
+}
+
+
+/* Common styles for all screen sizes */
+.login_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.login_form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: url('img/loging_bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.login_form h1 {
+  font-size: 2rem;
+}
+
+.login_form h1 span {
+  color: #c72092;
+}
+
+.login_form img {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.right {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.right h1 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.right form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.right label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.right .user,
+.right .password {
+  border: 2px solid #6c14d0;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.right .user i,
+.right .password i {
+  color: #c72092;
+  margin: auto 10px;
+}
+
+.right .user input,
+.right .password input {
+  flex: 1;
+  padding: 5px;
+}
+
+.right .forget {
+  color: #6c14d0;
+  cursor: pointer;
+  margin: 6px 0 10px 0;
+}
+
+.right button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.right .login_icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.right .login_icons a {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease;
+  /* Added transition effect */
+}
+
+.right .login_icons a:hover {
+  background-color: #c72092;
+  /* Change the background color on hover */
+}
+
+.right .login_icons i {
+  font-size: 20px;
+  line-height: 40px;
+  color: #333;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  .login_container {
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+  }
+
+  .login_form,
+  .right {
+    width: 80%;
+    margin: auto; /* Center the container */
+  }
+
+  .login_form img {
+    margin-top: 10px;
+  }
+
+  .right .login_icons a {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+
+  .right .login_icons i {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .login_form,
+  .right {
+    width: 90%;
+    margin: auto; /* Center the container */
+  }
+
+  .right .login_icons a {
+    width: 25px;
+    height: 25px;
+    margin: 0 3px;
+  }
+
+  .right .login_icons i {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer_main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin-bottom: 30px;
+}
+
+.tag h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #c72092; /* Pink color for heading */
+}
+
+.tag a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.tag a:hover {
+  color: #c72092; /* Pink color on hover */
+}
+
+.social_links a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #fff;
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.social_links a:hover {
+  color: #c72092; /* Pink color on hover */
+}
+
+.search_bar {
+  display: flex;
+  margin-top: 10px;
+}
+
+.search_bar input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search_bar button {
+  background-color: #c72092;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+.search_bar button:hover {
+  background-color: #6c14d0; /* Darker pink on hover */
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .footer_main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tag {
+    text-align: center;
+  }
+
+  .search_bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search_bar input {
+    margin-bottom: 10px;
+  }
+}
